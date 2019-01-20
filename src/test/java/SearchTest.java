@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 import page.MainPage;
 import page.SearchPage;
@@ -28,6 +29,12 @@ public class SearchTest {
         assertThat(res,equalTo(name));
     }
 
-    
+    @ParameterizedTest
+    @CsvFileSource(resources="/data/SearchTest.csv")
+    public void searchbycsv(String en,String cn){
+        System.out.println(en);
+        System.out.println(cn);
+        String res = searchPage.search(en).getall().get(0);
+    }
 
 }

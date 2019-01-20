@@ -1,0 +1,11 @@
+---
+username: 1222333
+password: aaaaaaa
+url: "http://127.0.0.1:4723/wd/hub"
+capabilitilies:
+  appPackage: com.xueqiu.android
+  appActivity: .common.MainActivity
+  deviceName: 192.168.56.101:5555
+  platformName: android
+  autoGrantPermissions: true
+  noReset: true

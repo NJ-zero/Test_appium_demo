@@ -49,8 +49,9 @@ public class SearchTest {
     @MethodSource("Getyaml")
     public void searchbyyaml(String en,String cn){
         System.out.println(en);
-        System.out.println(en);
+        System.out.println(cn);
         String res = searchPage.search(en).getall().get(0);
+        assertThat(res,equalTo(cn));
 
     }
 

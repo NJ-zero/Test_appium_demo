@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Config {
@@ -12,6 +13,9 @@ public class Config {
     public String password ;
     public String url;
     public HashMap<String, Object> capabilitilies = new HashMap<String, Object>();
+
+    public ArrayList<String> input;
+    public ArrayList<String> exp;
 
     public static Config load(String path){
         ObjectMapper mapper = new ObjectMapper(new YAMLFactory());

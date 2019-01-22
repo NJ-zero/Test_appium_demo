@@ -1,3 +1,5 @@
+package testcases;
+
 import driver.android_driver;
 import io.appium.java_client.TouchAction;
 import org.junit.jupiter.api.BeforeAll;
